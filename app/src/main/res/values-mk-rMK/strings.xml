@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">DailyBabyTrucker</string>
+	<string name="title_activity_welcome">Home Screen</string>
+	<string name="next">Следно</string>
+	<string name="skip">Прескокни</string>
+	<string name="start">Разбирам</string>
+	
+	<string name="slide_1_title"> Добре Дојдовте</string>
+	<string name="slide_1_desc"> Денот на Башето Бебе на дланка</string>
+	
+	<string name="slide_2_title">Персонализирајте го дневниот распоред</string>
+	<string name="slide_2_desc">Апликација за следење бебе за мајки што ќе ви помогне да ги персонализирате релевантните информации според дневниот распоред на вашето бебе</string>
+	
+	<string name="slide_3_title">Хранење</string>
+	<string name="slide_3_desc">Апликацијата е одличен начин на зачувување на распоредот за Хранење!</string>
+	
+	<string name="slide_4_title">Aктивности</string>
+	<string name="slide_4_desc">Апликацијата ќе ви помогне да ги пратите повеќето од дневните работи на новороденчето, како што се бројот на извалкани пелени, време на хранење, часови за спиење, време на дремнување и многу повеќе.</string>
+	
+	<string name="play_again_desc">За повторно да го видите лизгачот за добредојде, одете во Settings -> апликации -> лизгач за добредојде -> јасни податоци</string>
+	<string name="play_again">Гледај Повторно</string>
+	
+	
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="dbt_app_name">Дневен следач за бебиња</string>
+	
+	<!--  Login  -->
+	<string name="dbt_hint_username">Име на Бебето </string>
+	<string name="dbt_hint_password">Датум на раѓање </string>
+	<string name="change_language">Промени Јазик</string>
+	
+	<string name="bdp_button_next">Следно</string>
+	<string name="bdp_button_cancel">Откажи</string>
+	<string name="bdp_error_password">Пасвордот мора да содржо 8 карактери.</string>
+	<string name="bdp_filter_title">Филтер</string>
+	<string name="bdp_search_title">Пребарување</string>
+	<string name="bdp_product_title">Наслов</string>
+	<string name="bdp_product_description">Секундарниот текст</string>
+	
+	<!--  backdrop menu labels -->
+	<string name="bdp_feeding_label">Хранење/Доење</string>
+	<string name="bdp_sleeping_label">Спиење</string>
+	<string name="bdp_diapers_label">Менување пелени</string>
+	<string name="bdp_leisure_label">Активности</string>
+	<string name="bdp_growth_label">Растење/Развивање</string>
+	<string name="bdp_pumping_label">Пумпање</string>
+	<string name="bdp_health_label">Здравје</string>
+	<string name="bdp_account_label">Мој Профил</string>
+	
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+	<string name="bdp_settings_title">Поставки</string>
+	<string name="table_for_nutritions">Табела за исхрана</string>
+	
+	<string name="title_activity_settings">Пребарување</string>
+	
+	<!-- Preference Titles -->
+	<string name="messages_header">Пораки</string>
+	<string name="sync_header">Синхронизација</string>
+	
+	<!-- Messages Preferences -->
+	<string name="signature_title">Твој потпис</string>
+	<string name="reply_title">Дефинирана акција за одговор</string>
+	
+	<!-- Sync Preferences -->
+	<string name="sync_title">Периодично синхронизирање на е-пошта</string>
+	<string name="attachment_title"> Превземање на примени податоци</string>
+	<string name="attachment_summary_on">Автоматско превземање на податоци од примени е-пошти
+	</string>
+	<string name="attachment_summary_off">Превземи податоци само кога рачно ќе се побара</string>
+	<string name="search">Пребарување</string>
+	
+	<string name="messages_header1">Пораки</string>
+	<string name="title">Наслов</string>
+	<string name="recipeId">Идентификација на рецептот</string>
+
+</resources>

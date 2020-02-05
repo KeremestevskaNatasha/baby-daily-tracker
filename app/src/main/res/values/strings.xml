@@ -1,0 +1,78 @@
+<resources>
+	<string name="app_name">Daily Baby Tracker</string>
+	<string name="title_activity_welcome">Home Screen</string>
+	<string name="next">NEXT</string>
+	<string name="skip">SKIP</string>
+	<string name="start">GOT IT</string>
+	
+	<string name="slide_1_title">Wellcome</string>
+	<string name="slide_1_desc">Your baby’s day at your fingertips!</string>
+	
+	<string name="slide_2_title">Personalize the daily schedule</string>
+	<string name="slide_2_desc">The baby tracking app for moms which will help you personalize relevant information according to your baby’s daily schedule.</string>
+	
+	<string name="slide_3_title">Feeding, Breastfeeding!</string>
+	<string name="slide_3_desc">The app is an excellent way to keep a log of your baby’s breastfeeding, feeding schedule</string>
+	
+	<string name="slide_4_title">Activities</string>
+	<string name="slide_4_desc">The app will help you to track most of your newborn’s daily things, such as the number of soiled diapers, feeding times, sleep hours, nap times and more.</string>
+	
+	<string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+	<string name="play_again">Play Again</string>
+	
+	
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="dbt_app_name">Daily Baby Trucker</string>
+	
+	<!--  Login  -->
+	<string name="dbt_hint_username">Baby Name </string>
+	<string name="dbt_hint_password">Date of Birth</string>
+	<string name="change_language">Change Language</string>
+	
+	<string name="bdp_button_next">Next</string>
+	<string name="bdp_button_cancel">Cancel</string>
+	<string name="bdp_error_password">Password must contain at least 8 characters.</string>
+	<string name="bdp_filter_title">Filter</string>
+	<string name="bdp_search_title">Search</string>
+	<string name="bdp_product_title">Title</string>
+	<string name="bdp_product_description">Secondary text</string>
+	
+	<!--  backdrop menu labels -->
+	<string name="bdp_feeding_label">Feeding</string>
+	<string name="bdp_sleeping_label">Sleeping</string>
+	<string name="bdp_diapers_label">Diapering</string>
+	<string name="bdp_leisure_label">Leisure</string>
+	<string name="bdp_growth_label">Growth</string>
+	<string name="bdp_pumping_label">Pumping</string>
+	<string name="bdp_health_label">Health</string>
+	<string name="bdp_account_label">My Account</string>
+	
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+	<string name="title_activity_settings">Settings</string>
+	
+	<!-- Preference Titles -->
+	<string name="messages_header">Messages</string>
+	<string name="sync_header">Sync</string>
+	
+	<!-- Messages Preferences -->
+	<string name="signature_title">Your signature</string>
+	<string name="reply_title">Default reply action</string>
+	
+	<!-- Sync Preferences -->
+	<string name="sync_title">Sync email periodically</string>
+	<string name="attachment_title">Download incoming attachments</string>
+	<string name="attachment_summary_on">Automatically download attachments for incoming emails
+	</string>
+	<string name="attachment_summary_off">Only download attachments when manually requested</string>
+	<string name="bdp_settings_title">Settings</string>
+	<string name="search">Search</string>
+	<string name="table_for_nutritions">Table for nutritions</string>
+	
+	<string name="messages_header1">Messages</string>
+	<string name="title">Title</string>
+	<string name="recipeId">Recipes Id</string>
+
+
+</resources>
