@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">DailyBabyTrucker</string>
+	<string name="app_name">DailyBabyTracker</string>
 	<string name="title_activity_welcome">Home Screen</string>
 	<string name="next">Следно</string>
 	<string name="skip">Прескокни</string>
@@ -75,5 +75,6 @@
 	<string name="messages_header1">Пораки</string>
 	<string name="title">Наслов</string>
 	<string name="recipeId">Идентификација на рецептот</string>
+	<string name="bdp_home_label">Home</string>
 
 </resources>

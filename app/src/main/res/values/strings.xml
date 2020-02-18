@@ -22,7 +22,7 @@
 	
 	
 	<!-- TODO: Remove or change this placeholder text -->
-	<string name="dbt_app_name">Daily Baby Trucker</string>
+	<string name="dbt_app_name">Daily Baby Tracker</string>
 	
 	<!--  Login  -->
 	<string name="dbt_hint_username">Baby Name </string>
@@ -73,6 +73,7 @@
 	<string name="messages_header1">Messages</string>
 	<string name="title">Title</string>
 	<string name="recipeId">Recipes Id</string>
+	<string name="bdp_home_label">Home</string>
 
 
 </resources>

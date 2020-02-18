@@ -1,50 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	tools:context=".fragments.RecipesFragment">
 	
-	<LinearLayout
-		style="@style/Widget.Shrine.Backdrop"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:gravity="center_horizontal"
-		android:orientation="vertical"
-		android:paddingTop="88dp">
-		
-		<include layout="@layout/bdp_backdrop" />
-	</LinearLayout>
-	
-	
-	<com.google.android.material.appbar.AppBarLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		
-		app:elevation="0dp">
-		
-		<androidx.appcompat.widget.Toolbar
-			android:id="@+id/app_bar"
-			style="@style/Widget.Shrine.Toolbar"
-			android:layout_width="match_parent"
-			android:layout_height="?attr/actionBarSize"
-			android:paddingStart="12dp"
-			android:paddingLeft="12dp"
-			android:paddingEnd="12dp"
-			android:paddingRight="12dp"
-			app:contentInsetStart="0dp"
-			app:navigationIcon="@drawable/dbt_menu"
-			app:title="@string/dbt_app_name" />
-	
-	</com.google.android.material.appbar.AppBarLayout>
-	
-	<FrameLayout
-		android:id="@+id/main_container"
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/product_grid"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:layout_marginTop="56dp"
 		android:elevation="8dp"
-		app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		
+		
+		<androidx.recyclerview.widget.RecyclerView
+			android:id="@+id/recycler_view"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"/>
+		
+	
+	</androidx.core.widget.NestedScrollView>
+	
+	<ProgressBar
+		android:id="@+id/progressBar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center" />
+	
+	<TextView
+		android:id="@+id/tvError"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="Something went wrong"
+		android:textSize="16sp"
+		android:visibility="gone" />
 
 </FrameLayout>

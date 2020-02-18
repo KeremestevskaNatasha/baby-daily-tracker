@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 
-import com.example.dailybabytrucker.fragments.RecipesGridFragment;
+import com.example.dailybabytrucker.fragments.HomeFragment;
 import com.example.dailybabytrucker.R;
 
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
 
             getSupportFragmentManager()
                     .beginTransaction()
-                    .add(R.id.container, new RecipesGridFragment())
+                    .add(R.id.container, new HomeFragment())
                     .commit();
         }
 

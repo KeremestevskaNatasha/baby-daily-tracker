@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
                     mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     LoginActivity.this.startActivity(mIntent);
 
-//                    ((NavigationHost) getActivity()).navigateTo(new RecipesGridFragment(), false); // Navigate to the next Fragment
+//                    ((NavigationHost) getActivity()).navigateTo(new HomeFragment(), false); // Navigate to the next Fragment
                 }
             }
         });// Clear the error once more than 8 characters are typed.

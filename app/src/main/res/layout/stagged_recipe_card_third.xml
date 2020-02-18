@@ -32,6 +32,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:text="@string/title"
+				android:textSize= "15dp"
 				android:textAlignment="center"
 				android:textAppearance="?attr/textAppearanceSubtitle2" />
 			

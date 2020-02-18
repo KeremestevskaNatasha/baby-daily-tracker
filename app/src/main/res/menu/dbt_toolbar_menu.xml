@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto">
-	<item
-		android:id="@+id/branded_menu"
-		android:icon="@drawable/dbt_menu"
-		android:title="@string/bdp_search_title"
-		app:showAsAction="always" />
 	
 	<item
 		android:id="@+id/search"
@@ -13,12 +8,6 @@
 		android:title="@string/search"
 		app:showAsAction="always"  />
 	
-<!--	-->
-<!--	<itemn-->
-<!--		android:id="@+id/filter"-->
-<!--		android:icon="@drawable/dbt_filter"-->
-<!--		android:title="@string/bdp_filter_title"-->
-<!--		app:showAsAction="always" />-->
 	
 	<item
 		android:id="@+id/settings1"

@@ -20,19 +20,19 @@ android {
 
     flavorDimensions "env"
 
-    productFlavors{
-       dev{
-           dimension "env"
-           buildConfigField "String","BASE_URL","\"https://api.spoonacular.com/\""
-           buildConfigField "String", "API_KEY", "\"d0a5e6e075b243ed914b0887930a8c58\""
+    productFlavors {
+        dev {
+            dimension "env"
+            buildConfigField "String", "BASE_URL", "\"https://api.spoonacular.com/\""
+            buildConfigField "String", "API_KEY", "\"d0a5e6e075b243ed914b0887930a8c58\""
 
-       }
-       prod{
-           dimension "env"
-           buildConfigField "String","BASE_URL","\"https://api.spoonacular.com/\""
-           buildConfigField "String", "API_KEY", "\"d0a5e6e075b243ed914b0887930a8c58\""
+        }
+        prod {
+            dimension "env"
+            buildConfigField "String", "BASE_URL", "\"https://api.spoonacular.com/\""
+            buildConfigField "String", "API_KEY", "\"d0a5e6e075b243ed914b0887930a8c58\""
 
-       }
+        }
     }
 }
 
