@@ -1,14 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:background="@color/colorPrimary"
+	android:gravity="center"
+	android:orientation="vertical"
+	android:padding="10dp"
 	tools:context=".fragments.SleepingFragment">
 	
-	<!-- TODO: Update blank fragment layout -->
+	
 	<TextView
+		android:id="@+id/tv_sleepingSchadule"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginBottom="50dp"
+		android:text="@string/sleeping_schedule_notes"
+		android:textAppearance="@color/colorPrimaryDark"
+		android:textSize="20dp" />
+	
+	
+	<ScrollView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		
+		<TextView
+			android:id="@+id/tv_descriptionSchadule"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_margin="12dp"
+			android:background="@drawable/bg_round"
+			android:padding="12dp"
+			android:text="@string/about_sleeping_schadule"
+			android:textSize="15sp" />
+	
+	
+	</ScrollView>
+	
+	
+	<EditText
+		android:id="@+id/et_takeNotes"
+		style="@style/Widget.Shrine.TextInputLayout"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:text="@string/hello_blank_fragment" />
+		android:layout_height="wrap_content"
+		android:background="@drawable/bg_round"
+		android:hint="Take note.."
+		android:padding="12dp"
+		android:textColorHint="@color/colorAccent" />
+	
+	
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		
+		<Button
+			android:id="@+id/save_button"
+			style="@style/Widget.Shrine.Button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:layout_alignParentRight="true"
+			android:text="@string/bdp_button_next"
+			android:textSize="15dp" />
+		
+		<Button
+			android:id="@+id/clear_button"
+			style="@style/Widget.Shrine.Button.TextButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginEnd="12dp"
+			android:layout_marginRight="12dp"
+			android:layout_toStartOf="@id/save_button"
+			android:layout_toLeftOf="@id/save_button"
+			android:text="@string/bdp_button_cancel"
+			android:textSize="15dp" />
+	
+	
+	</RelativeLayout>
 
-</FrameLayout>
+
+</LinearLayout>

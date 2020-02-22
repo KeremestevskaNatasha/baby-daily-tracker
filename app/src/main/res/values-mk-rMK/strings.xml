@@ -76,5 +76,7 @@
 	<string name="title">Наслов</string>
 	<string name="recipeId">Идентификација на рецептот</string>
 	<string name="bdp_home_label">Home</string>
+	<string name="sleeping_schedule_notes">Sleeping schedule notes</string>
+	<string name="about_sleeping_schadule">Keep in mind that newborn schedules are generally much more variable than older children’s schedules. A baby doesn’t really get on a clock-based schedule until 6 months old, on average, though some are naturally more predictable than others.</string>
 
 </resources>

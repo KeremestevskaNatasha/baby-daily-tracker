@@ -39,22 +39,22 @@ public class FeedingFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_feeding, container, false);
 
-        getFragmentManager().beginTransaction()
-                .replace(R.id.main_container, new ExpandableMainFragment())
-                .commit();
-
-        button6PlusMonths=view.findViewById(R.id.months6);
-        button6PlusMonths.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentManager fragmentManager = getFragmentManager();
-                ExpandableMainFragment expandableMainFragment = new ExpandableMainFragment();
-                if (fragmentManager != null) {
-                    fragmentManager.beginTransaction().replace(R.id.main_container, expandableMainFragment).commit();
-                }
-
-            }
-        });
+//        getFragmentManager().beginTransaction()
+//                .replace(R.id.main_container, new ExpandableMainFragment())
+//                .commit();
+//
+//        button6PlusMonths=view.findViewById(R.id.months6);
+//        button6PlusMonths.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                FragmentManager fragmentManager = getFragmentManager();
+//                ExpandableMainFragment expandableMainFragment = new ExpandableMainFragment();
+//                if (fragmentManager != null) {
+//                    fragmentManager.beginTransaction().replace(R.id.main_container, expandableMainFragment).commit();
+//                }
+//
+//            }
+//        });
 
 
 

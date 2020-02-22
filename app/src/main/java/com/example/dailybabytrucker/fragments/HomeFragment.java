@@ -30,7 +30,9 @@ import com.example.dailybabytrucker.UI.activities.SettingsActivity;
  */
 public class HomeFragment extends Fragment {
 
-    private Button buttonFeeding;
+    private Button buttonHome, buttonFeeding, buttonSleeping, buttonGrowth, buttonLeisure;
+    private Button buttonMyAccount, buttonSettings;
+
     private Toolbar toolbar;
     private NavigationIconClickListener navigationIconClickListener;
 
@@ -56,6 +58,19 @@ public class HomeFragment extends Fragment {
             view.findViewById(R.id.main_container).setBackgroundResource(R.drawable.product_grid_background_shape);
         }
 
+        buttonHome = view.findViewById(R.id.homeButton);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getFragmentManager();
+                RecipesFragment recipesFragment = new RecipesFragment();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction().replace(R.id.main_container, recipesFragment).commit();
+                }
+
+            }
+        });
+
         buttonFeeding = view.findViewById(R.id.feedingButton);
         buttonFeeding.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +84,68 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        buttonSleeping = view.findViewById(R.id.sleepingButton);
+        buttonSleeping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                FragmentManager fragmentManager = getFragmentManager();
+                SleepingFragment sleepingFragment = new SleepingFragment();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction().replace(R.id.main_container, sleepingFragment).commit();
+                }
+
+            }
+        });
+
+
+        buttonGrowth = view.findViewById(R.id.growthButton);
+        buttonGrowth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                FragmentManager fragmentManager = getFragmentManager();
+                GrowthFragment growthFragment = new GrowthFragment();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction().replace(R.id.main_container, growthFragment).commit();
+                }
+
+            }
+        });
+
+        buttonLeisure = view.findViewById(R.id.leisureButton);
+        buttonLeisure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getFragmentManager();
+                LeisureFragment leisureFragment = new LeisureFragment();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction().replace(R.id.main_container, leisureFragment).commit();
+                }
+
+            }
+        });
+        buttonMyAccount = view.findViewById(R.id.myAccountButton);
+        buttonMyAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getFragmentManager();
+                MyAccountFragment myAccountFragment = new MyAccountFragment();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction().replace(R.id.main_container, myAccountFragment).commit();
+                }
+
+            }
+        });
+
+        buttonSettings = view.findViewById(R.id.settingsButton);
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         return view;
@@ -94,16 +171,5 @@ public class HomeFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater) {
         menuInflater.inflate(R.menu.dbt_toolbar_menu, menu);
         super.onCreateOptionsMenu(menu, menuInflater);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (item.getItemId() == R.id.settings1) {
-            Intent intent = new Intent(getContext(), SettingsActivity.class);
-            startActivity(intent);
-            return true;
-        }
-        return false;
     }
 }

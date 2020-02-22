@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View view, int i, KeyEvent keyEvent) {
-                if (isPasswordValid(passwordEditText.getText())){
+                if (isPasswordValid(passwordEditText.getText())) {
 
                     passwordTextInput.setError(null);  // Clear Error.
                 }
