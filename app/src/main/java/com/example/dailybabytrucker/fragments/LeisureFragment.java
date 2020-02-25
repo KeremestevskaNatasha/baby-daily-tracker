@@ -63,7 +63,9 @@ public class LeisureFragment extends Fragment {
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerViewVideos.setLayoutManager(linearLayoutManager);
-        VideosRecyclerViewAdapter adapter = new VideosRecyclerViewAdapter(getContext(), imgVideos, videoTitle, placeGuiedVideos, btnWatchVideo);
+        VideosRecyclerViewAdapter adapter =
+                new VideosRecyclerViewAdapter(getContext(),
+                        imgVideos, videoTitle, placeGuiedVideos, btnWatchVideo);
         recyclerViewVideos.setAdapter(adapter);
 
         return rootView;

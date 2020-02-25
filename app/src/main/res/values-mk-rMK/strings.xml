@@ -78,5 +78,41 @@
 	<string name="bdp_home_label">Home</string>
 	<string name="sleeping_schedule_notes">Sleeping schedule notes</string>
 	<string name="about_sleeping_schadule">Keep in mind that newborn schedules are generally much more variable than older children’s schedules. A baby doesn’t really get on a clock-based schedule until 6 months old, on average, though some are naturally more predictable than others.</string>
+	<string name="your_baby_s_growth_first_12_months">Your baby’s growth – first 12 months</string>
+	<string name="your_baby_s_growth">Your baby’s growth</string>
+	
+	
+	<string name="growth_1st_mont">Infant development begins at at birth and they grow fast and learn a lot.
+		At 1 month, cuddling, sleeping and feeding are all that really matters to your baby.
+		The time you spend with them will help their brain to grow and develop as they start to experience the world.</string>
+	<string name="growth_2nd_mont">Your 2-month-old is growing fast and becoming more alert.
+		They will be making more sounds and getting more skilled at moving their body.
+		They will still be crying a lot - but you’ve probably already seen that magic first smile (usually at 6 weeks) which somehow makes all the hard work worthwhile.</string>
+	<string name="growth_3th_mont">By 3 months, your baby will have formed a strong attachment to you.
+		They will respond to you with lots of smiles, and might even talk back to you in their own way.
+		The worst of the crying should be nearly over, and you can really enjoy your baby as they grow into their own little person.</string>
+	<string name="growth_4th_mont">From 4 months, your baby will quickly be learning to coordinate their body.
+		They will have more control over what they do, their vision, touch and hearing will be much more developed, and they will start to move around much more.
+		They can communicate much better too, and the number of hours for which they cry should have settled by now.</string>
+	<string name="growth_5th_mont">Your baby will be growing and developing rapidly now.
+		They are learning more about the world and how they fit into it. Many of the new things your baby is learning at 5 months are preparing them for eating solid food.
+		It is usually recommended you introduce solids at 6 months, but some babies are ready as early as 4 months.
+		So, if you think it’s time, it’s fine to start experimenting with solids now.</string>
+	<string name="growth_6th_mont">Six months is an exciting time and your baby will now be developing very fast.
+		The left side of their brain will have has started communicating with the right side, meaning they can coordinate their body better.
+		You will be understanding your baby much better now as they let you know whether they’re happy or sad and start to respond to words</string>
+	<string name="growth_7th_mont">Your baby is now growing up fast.
+		They may well be sitting on their own, eating solid foods - although breastmilk or formula will still be their main source of nutrition - and understanding more about what you want from them.
+		It’s an exciting time to watch them grow</string>
+	<string name="growth_8th_mont">Your 8-month-old is probably getting into everything and moving around a lot as they explore the world.
+		This means more work for you, but it’s wonderful to watch their fascination grow.</string>
+	<string name="growth_9th_mont">At around 9 months, babies’ brains have a growth spurt.
+		They will really be developing a personality now, and you’ll be getting a glimpse of the child they’re going to grow into.</string>
+	<string name="growth_10th_mont">Your 10-month-old will now be very active.
+		You’ll probably be chasing around after them as they crawl and pull themselves up onto furniture, and you’ll be learning more about your baby’s developing personality.</string>
+	<string name="growth_11th_mont">At 11 months old, your baby will be almost a toddler, and they will be maturing fast.
+		You’ll probably be surprised how quickly they can move around your home and how independent they are becoming.</string>
+	<string name="growth_12th_mont">At 12 months, your baby is officially a toddler.
+		If they haven’t already, it won’t be long now before they take their first steps, develop a sense of humour, and tell you they love you.</string>
 
 </resources>
