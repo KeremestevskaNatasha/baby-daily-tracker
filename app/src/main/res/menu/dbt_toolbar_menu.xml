@@ -8,12 +8,6 @@
 		android:title="@string/search"
 		app:showAsAction="always"  />
 	
-<!--	-->
-<!--	<item-->
-<!--		android:id="@+id/settings1"-->
-<!--		android:icon="@drawable/dbt_settings"-->
-<!--		android:title="@string/bdp_settings_title"-->
-<!--		app:showAsAction="always" />-->
 
 
 </menu>

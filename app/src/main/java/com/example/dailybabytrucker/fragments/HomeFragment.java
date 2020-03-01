@@ -1,6 +1,7 @@
 package com.example.dailybabytrucker.fragments;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -127,6 +128,7 @@ public class HomeFragment extends Fragment {
         });
         buttonMyAccount = view.findViewById(R.id.myAccountButton);
         buttonMyAccount.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceType")
             @Override
             public void onClick(View view) {
                 FragmentManager fragmentManager = getFragmentManager();

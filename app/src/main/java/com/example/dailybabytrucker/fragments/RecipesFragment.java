@@ -66,8 +66,12 @@ public class RecipesFragment extends Fragment {
 
                 List<RandomRecipes> recipes = response.body().getRecipes();
 
-                StaggeredRecipesCardRecyclerViewAdapter adapter = new StaggeredRecipesCardRecyclerViewAdapter(getContext(), recipes);
+                StaggeredRecipesCardRecyclerViewAdapter adapter =
+                        new StaggeredRecipesCardRecyclerViewAdapter(getContext(), recipes);
                 recyclerView.setAdapter(adapter);   // the 2 lines set in the onResponse od Retrofit
+
+
+
 
 //                int largePadding = getResources().getDimensionPixelSize(R.dimen.shr_product_grid_spacing);
 //                int smallPadding = getResources().getDimensionPixelSize(R.dimen.shr_product_grid_spacing_small);

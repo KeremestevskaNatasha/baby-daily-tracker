@@ -9,4 +9,29 @@
 		<item>English</item>
 		<item>Macedonian</item>
 	</string-array>
+	
+	<string-array name="gender_entries">
+		<item>-</item>
+		<item>Boy</item>
+		<item>Girl</item>
+	</string-array>
+	<string-array name="gender_values">
+		<item>-</item>
+		<item>Boy</item>
+		<item>Girl</item>
+		</string-array>
+	<string-array name="relation_entries">
+		<item>Mom</item>
+		<item>Dad</item>
+		<item>Relative</item>
+		
+		</string-array>
+	<string-array name="relation_values">
+		
+		<item>Mom</item>
+		<item>Dad</item>
+		<item>Relative</item>
+		</string-array>
+
+
 </resources>
