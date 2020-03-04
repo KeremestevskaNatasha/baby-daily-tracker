@@ -11,7 +11,7 @@ import com.example.dailybabytrucker.fragments.HomeFragment;
 import com.example.dailybabytrucker.R;
 
 
-public class MainActivity extends AppCompatActivity implements NavigationHost {
+public class MainActivity extends AppCompatActivity implements NavigationHost  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +42,7 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         }
         transaction.commit();
 
+
     }
+
 }

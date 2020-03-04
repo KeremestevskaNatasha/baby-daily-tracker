@@ -115,5 +115,10 @@
 	<string name="growth_12th_mont">At 12 months, your baby is officially a toddler.
 		If they haven’t already, it won’t be long now before they take their first steps, develop a sense of humour, and tell you they love you.</string>
 	<string name="logOutButton">logout</string>
+	<string name="bdp_button_save">Save</string>
+	<string name="delete">Delete</string>
+	<string name="time">Time</string>
+	<string name="note">Note</string>
+	<string name="enter_your_note_here">Add note</string>
 
 </resources>

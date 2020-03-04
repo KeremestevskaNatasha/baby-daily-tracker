@@ -7,6 +7,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,26 +17,31 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dailybabytrucker.R;
+import com.example.dailybabytrucker.adapter.NotesAdapter;
+import com.example.dailybabytrucker.model.Note;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.Set;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class SleepingFragment extends Fragment {
 
-    TextView tvSleepingSchadule, tvDescriptionSchadule ;
+    TextView tvSleepingSchadule;
     EditText etTakeNotes;
-    Button buttonSave, buttonClear;
-    JSONObject saved = new JSONObject();
-    SharedPreferences preferences;
-    SharedPreferences.Editor editor;
-    View rootView;
+    ImageButton btnAddNote;
+
+    ArrayList<Note> arrayList = new ArrayList<>();
+    ArrayList<String> notes = null;
 
     public SleepingFragment() {
         // Required empty public constructor
@@ -44,77 +52,65 @@ public class SleepingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_sleeping, container, false);
+        View view = inflater.inflate(R.layout.fragment_sleeping, container, false);
 
-        tvSleepingSchadule= rootView.findViewById(R.id.tv_sleepingSchadule);
-        tvDescriptionSchadule= rootView.findViewById(R.id.tv_descriptionSchadule);
-        etTakeNotes = rootView.findViewById(R.id.et_takeNotes);
-        buttonSave = rootView.findViewById(R.id.save_button);
-        buttonClear = rootView.findViewById(R.id.clear_button);
+        tvSleepingSchadule = view.findViewById(R.id.tv_sleepingSchedule);
 
-//      init();
 
-      // When we want to replace Fragment, use FragmentManager and FragmentTransaction. ToDO
 
-//        Intent intent = getIntent();
-//        if (intent.getIntExtra("position",-1) != -1){
-//            try{
-//                String s = etTakeNotes.getText().toString();
-//                if(!preferences.getString("saved","").equals(""))
-//                    saved = new JSONObject(preferences.getString("saved",""));
-//                etTakeNotes.setText(saved.getString("name"+intent.getIntExtra("position",0)));
-//                s = saved.getString("saved"+intent.getIntExtra("position",0));
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
-//        }
+        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("myprefs", MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        buttonClear.setOnClickListener(new View.OnClickListener() {
+        final EditText etTakeNotes = view.findViewById(R.id.etNote);
+        btnAddNote = view.findViewById(R.id.btnAddNote);
+
+        Map<String, String> map = (Map<String, String>) sharedPreferences.getAll();
+        Set<String> keySet = map.keySet();
+
+        notes = new ArrayList<>(keySet);
+
+        for (int i = 0; i < notes.size(); i++) {
+            String title = map.get(notes.get(i));
+            String timeStamp = notes.get(i);
+            arrayList.add(new Note(title, timeStamp));
+        }
+
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        final NotesAdapter notesAdapter = new NotesAdapter(arrayList);
+
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(notesAdapter);
+
+        btnAddNote = view.findViewById(R.id.btnAddNote);
+        btnAddNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String s = etTakeNotes.getText().toString();
-                if(s.isEmpty()){
-                    Toast.makeText(getContext(),"Take a note!!", Toast.LENGTH_SHORT).show();
-                } else {
-                    etTakeNotes.setText("");
+
+                long sec = System.currentTimeMillis();
+                String etText = etTakeNotes.getText().toString();
+                if (etText.equals("")) {
+                    return;
                 }
+                editor.putString("" + sec, etText);
+                arrayList.add(new Note(etTakeNotes.getText().toString(), "" + sec));
+                notesAdapter.notifyDataSetChanged();
+                editor.apply();
+                etTakeNotes.setText("");
+
+
+//                FragmentManager fragmentManager = getFragmentManager();
+//                NotesFragment notesFragment = new NotesFragment();
+//                if (fragmentManager != null) {
+//                    fragmentManager.beginTransaction().replace(R.id.main_container, notesFragment).commit();
+//                }
             }
         });
 
-//        buttonSave.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String s = etTakeNotes.getText().toString();
-//                if (!s.equals("")){
-//                } try {
-//                    if(!preferences.getString("saved","").equals(""))
-//                        saved= new JSONObject(preferences.getString("saved","0"))
-//                                saved.put("saved"+saved.length(),s);
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//                Log.d("testing", saved+"");
-//                editor.putString("saved", saved.toString());
-//                editor.apply();
-//                etTakeNotes.setText("");
-//                Intent intent1 = new Intent (getContext().SleepingNotesFragment.class)
-//            }
-//        });
 
-        return rootView;
+        return view;
     }
-
-//    private void init() {
-//
-//        preferences = getSharedPreferences("text", Context.MODE_PRIVATE);
-//        editor = preferences.edit();
-//        etTakeNotes = rootView.findViewById(R.id.et_takeNotes);
-//        buttonSave = rootView.findViewById(R.id.save_button);
-//        buttonClear = rootView.findViewById(R.id.clear_button);
-//    }
-//
-//    private SharedPreferences getSharedPreferences(String text, int modePrivate) {
-//        return saved;
-//    }
-
 }
+
+

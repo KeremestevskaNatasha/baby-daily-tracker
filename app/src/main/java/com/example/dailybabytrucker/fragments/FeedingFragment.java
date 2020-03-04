@@ -57,8 +57,8 @@ public class FeedingFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 ExpandableMain6Fragment expandableMain6Fragment = new ExpandableMain6Fragment();
 
-                if(fragmentManager != null){
-                    fragmentManager.beginTransaction().replace(R.id.main_container,expandableMain6Fragment).commit();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction().replace(R.id.main_container, expandableMain6Fragment).commit();
                 }
 
             }
