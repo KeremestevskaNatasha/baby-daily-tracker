@@ -50,6 +50,11 @@ public class RecipesFragment extends Fragment {
 //         set up recyclerView
         final RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view);
 //        recyclerView.setHasFixedSize(true);
+
+
+        //RW, want TO BE
+        // staggered asymmetric grid layout cards, BUT m doing something wrong, just set as linear
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager
                 (getContext(), RecyclerView.HORIZONTAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -69,8 +74,6 @@ public class RecipesFragment extends Fragment {
                 StaggeredRecipesCardRecyclerViewAdapter adapter =
                         new StaggeredRecipesCardRecyclerViewAdapter(getContext(), recipes);
                 recyclerView.setAdapter(adapter);   // the 2 lines set in the onResponse od Retrofit
-
-
 
 
 //                int largePadding = getResources().getDimensionPixelSize(R.dimen.shr_product_grid_spacing);

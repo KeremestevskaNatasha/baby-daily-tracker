@@ -4,9 +4,19 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:background="@color/colorAccent"
+	android:background="@color/colorPrimary"
+	android:id="@+id/my_account"
 	tools:context=".fragments.MyAccountFragment">
 	
-	<include layout="" />
-
+	
+<!--	<include android:xml="my_account_preferences" />-->
+	
+	<Button
+		android:id="@+id/logout_button"
+		android:text="Logout Button"
+		android:layout_margin="8dp"
+		android:gravity="center"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+	
 </FrameLayout>

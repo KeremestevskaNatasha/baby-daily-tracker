@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.KeyEvent;
@@ -16,6 +17,8 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
+    SharedPreferences sp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +27,14 @@ public class LoginActivity extends AppCompatActivity {
 
         final TextInputLayout passwordTextInput = findViewById(R.id.password_text_input);
         final TextInputEditText passwordEditText = findViewById(R.id.password_edit_text);
-        MaterialButton nextButton = findViewById(R.id.next_button);
+        MaterialButton loginButton = findViewById(R.id.login_button);
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        sp = getSharedPreferences("login",MODE_PRIVATE);
+        if(sp.getBoolean("logged",false)){
+            goToMainActivity();
+        }
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (!isPasswordValid(passwordEditText.getText())) {
@@ -34,16 +42,11 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     passwordTextInput.setError(null); // Clear the error
 
-
-                    Intent mIntent = new Intent(LoginActivity.this, MainActivity.class);
-                    mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    LoginActivity.this.startActivity(mIntent);
-
-//                    ((NavigationHost) getActivity()).navigateTo(new HomeFragment(), false); // Navigate to the next Fragment
+                    goToMainActivity();
+                    sp.edit().putBoolean("logged",true).apply();
                 }
             }
         });// Clear the error once more than 8 characters are typed.
-
 
         passwordEditText.setOnKeyListener(new View.OnKeyListener() {
             @Override
@@ -56,6 +59,13 @@ public class LoginActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    private void goToMainActivity() {
+
+        Intent mIntent = new Intent(LoginActivity.this, MainActivity.class);
+        mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        LoginActivity.this.startActivity(mIntent);
     }
 
     private boolean isPasswordValid(@NonNull Editable text) {

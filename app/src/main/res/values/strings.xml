@@ -122,6 +122,7 @@
 	<string name="time">Time</string>
 	<string name="note">Note</string>
 	<string name="enter_your_note_here">Add note</string>
+	<string name="bdp_button_login">Login</string>
 
 
 </resources>
