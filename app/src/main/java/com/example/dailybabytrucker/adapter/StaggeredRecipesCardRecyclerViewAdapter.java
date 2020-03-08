@@ -27,7 +27,7 @@ public class StaggeredRecipesCardRecyclerViewAdapter extends RecyclerView.Adapte
     List<RandomRecipes> recipesList;
     private Context context;
 
-    public StaggeredRecipesCardRecyclerViewAdapter(Context context,List<RandomRecipes> recipes) {
+    public StaggeredRecipesCardRecyclerViewAdapter(Context context, List<RandomRecipes> recipes) {
         this.context = context;
         recipesList = recipes;
     }
@@ -42,12 +42,12 @@ public class StaggeredRecipesCardRecyclerViewAdapter extends RecyclerView.Adapte
     @Override
     public StaggeredRecipesCardViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-//        int layoutId = R.layout.stagged_recipe_card_first;
-//        if (viewType == 1) {
-//            layoutId = R.layout.stagged_recipe_card_second;
-//        } else if (viewType == 2) {
-//            layoutId = R.layout.stagged_recipe_card_third;
-//        }
+        int layoutId = R.layout.stagged_recipe_card_first;
+        if (viewType == 1) {
+            layoutId = R.layout.stagged_recipe_card_second;
+        } else if (viewType == 2) {
+            layoutId = R.layout.stagged_recipe_card_third;
+        }
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_card, parent, false);
         return new StaggeredRecipesCardViewHolder(layoutView);
     }
@@ -75,13 +75,10 @@ public class StaggeredRecipesCardRecyclerViewAdapter extends RecyclerView.Adapte
                     sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, recipes.getTitle());
                     context.startActivity(Intent.createChooser(sharingIntent, "Share via"));
 
-
                 }
             });
 
-
         }
-
 
     }
 

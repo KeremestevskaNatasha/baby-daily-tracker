@@ -4,6 +4,7 @@ package com.example.dailybabytrucker.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -48,16 +49,27 @@ public class RecipesFragment extends Fragment {
         tvError = rootView.findViewById(R.id.tvError);
 
 //         set up recyclerView
-        final RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view);
+//        final RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view);
 //        recyclerView.setHasFixedSize(true);
+
+        final RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.HORIZONTAL, false);
+        gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                return position % 3 == 2 ? 2 : 1;
+            }
+        });
+        recyclerView.setLayoutManager(gridLayoutManager);
 
 
         //RW, want TO BE
         // staggered asymmetric grid layout cards, BUT m doing something wrong, just set as linear
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager
-                (getContext(), RecyclerView.HORIZONTAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager
+//                (getContext(), RecyclerView.HORIZONTAL, false);
+//        recyclerView.setLayoutManager(linearLayoutManager);
 
 
         // set the call-retrofit
@@ -71,9 +83,18 @@ public class RecipesFragment extends Fragment {
 
                 List<RandomRecipes> recipes = response.body().getRecipes();
 
+//                StaggeredRecipesCardRecyclerViewAdapter adapter =
+//                        new StaggeredRecipesCardRecyclerViewAdapter(getContext(), recipes);
+//                recyclerView.setAdapter(adapter);   // the 2 lines set in the onResponse od Retrofit
+
+
                 StaggeredRecipesCardRecyclerViewAdapter adapter =
                         new StaggeredRecipesCardRecyclerViewAdapter(getContext(), recipes);
-                recyclerView.setAdapter(adapter);   // the 2 lines set in the onResponse od Retrofit
+                 recyclerView.setAdapter(adapter);
+                int largePadding = getResources().getDimensionPixelSize(R.dimen.shr_staggered_product_grid_spacing_large);
+                int smallPadding = getResources().getDimensionPixelSize(R.dimen.shr_staggered_product_grid_spacing_small);
+                recyclerView.addItemDecoration(new ProductGridItemDecoration(largePadding, smallPadding));
+
 
 
 //                int largePadding = getResources().getDimensionPixelSize(R.dimen.shr_product_grid_spacing);

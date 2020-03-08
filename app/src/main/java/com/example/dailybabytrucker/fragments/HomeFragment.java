@@ -15,13 +15,13 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
 
 import com.example.dailybabytrucker.R;
+import com.example.dailybabytrucker.UI.activities.MyAccountActivity;
 import com.example.dailybabytrucker.UI.activities.NavigationIconClickListener;
 import com.example.dailybabytrucker.UI.activities.SettingsActivity;
 
@@ -33,7 +33,6 @@ public class HomeFragment extends Fragment {
 
     private Button buttonHome, buttonFeeding, buttonSleeping, buttonGrowth, buttonLeisure;
     private Button buttonMyAccount, buttonSettings;
-
     private Toolbar toolbar;
     private NavigationIconClickListener navigationIconClickListener;
 
@@ -46,11 +45,9 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
         setUpToolbar(view); // setup the toolBar
-
         getFragmentManager().beginTransaction()
                 .replace(R.id.main_container, new RecipesFragment())
                 .commit();
@@ -58,7 +55,6 @@ public class HomeFragment extends Fragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             view.findViewById(R.id.main_container).setBackgroundResource(R.drawable.product_grid_background_shape);
         }
-
         buttonHome = view.findViewById(R.id.homeButton);
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,15 +124,10 @@ public class HomeFragment extends Fragment {
         });
         buttonMyAccount = view.findViewById(R.id.myAccountButton);
         buttonMyAccount.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ResourceType")
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getFragmentManager();
-                MyAccountFragment myAccountFragment = new MyAccountFragment();
-                if (fragmentManager != null) {
-                    fragmentManager.beginTransaction().replace(R.id.main_container, myAccountFragment).commit();
-                }
-
+                Intent intent = new Intent(getActivity(), MyAccountActivity.class);
+                startActivity(intent);
             }
         });
 
