@@ -29,8 +29,8 @@ public class LoginActivity extends AppCompatActivity {
         final TextInputEditText passwordEditText = findViewById(R.id.password_edit_text);
         MaterialButton loginButton = findViewById(R.id.login_button);
 
-        sp = getSharedPreferences("login",MODE_PRIVATE);
-        if(sp.getBoolean("logged",false)){
+        sp = getSharedPreferences("login", MODE_PRIVATE);
+        if (sp.getBoolean("logged", false)) {
             goToMainActivity();
         }
 
@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
                     passwordTextInput.setError(null); // Clear the error
 
                     goToMainActivity();
-                    sp.edit().putBoolean("logged",true).apply();
+                    sp.edit().putBoolean("logged", true).apply();
                 }
             }
         });// Clear the error once more than 8 characters are typed.
@@ -61,6 +61,12 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    private boolean isPasswordValid(@NonNull Editable text) {
+
+        return text != null && text.length() >= 8;
+    }
+
+
     private void goToMainActivity() {
 
         Intent mIntent = new Intent(LoginActivity.this, MainActivity.class);
@@ -68,9 +74,6 @@ public class LoginActivity extends AppCompatActivity {
         LoginActivity.this.startActivity(mIntent);
     }
 
-    private boolean isPasswordValid(@NonNull Editable text) {
 
-        return text != null && text.length() >= 8;
-    }
 }
 

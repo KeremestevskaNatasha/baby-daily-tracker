@@ -3,6 +3,7 @@ package com.example.dailybabytrucker.UI.activities;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -82,7 +83,6 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
 
-        //
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
 //        switch (item.getItemId()) {
@@ -92,5 +92,8 @@ public class SettingsActivity extends AppCompatActivity {
 //            case R.id.action_macedonian:
 //                saveLanguage("mk");
 //                break;
-    }
+//    }
+}
+
+
 }
