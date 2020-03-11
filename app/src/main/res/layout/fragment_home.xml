@@ -27,6 +27,7 @@
 			style="@style/Widget.Shrine.Toolbar"
 			android:layout_width="match_parent"
 			android:layout_height="?attr/actionBarSize"
+			android:elevation="4dp"
 			android:paddingStart="12dp"
 			android:paddingLeft="12dp"
 			android:paddingEnd="12dp"
@@ -37,13 +38,16 @@
 	
 	</com.google.android.material.appbar.AppBarLayout>
 	
-	<FrameLayout
-		android:id="@+id/main_container"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:layout_marginTop="56dp"
-		android:elevation="8dp"
-		app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+	
+		<FrameLayout
+			android:id="@+id/main_container"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="56dp"
+			android:elevation="8dp"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+	
+	
 
 
 </FrameLayout>

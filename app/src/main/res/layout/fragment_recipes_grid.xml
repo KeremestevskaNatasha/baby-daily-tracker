@@ -6,6 +6,7 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	tools:context=".fragments.RecipesFragment">
 	
+	
 	<androidx.core.widget.NestedScrollView
 		android:id="@+id/product_grid"
 		android:layout_width="match_parent"
@@ -14,15 +15,16 @@
 		android:elevation="8dp"
 		app:layout_behavior="@string/appbar_scrolling_view_behavior">
 		
-		
 		<androidx.recyclerview.widget.RecyclerView
 			android:id="@+id/recycler_view"
-			android:orientation="vertical"
+			android:orientation="horizontal"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"/>
 		
-	
 	</androidx.core.widget.NestedScrollView>
+	
+	
+	
 	
 	<ProgressBar
 		android:id="@+id/progressBar"

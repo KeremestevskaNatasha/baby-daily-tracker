@@ -54,7 +54,8 @@ public class RecipesFragment extends Fragment {
 
         final RecyclerView recyclerView = rootView.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.HORIZONTAL, false);
+        GridLayoutManager gridLayoutManager =
+                new GridLayoutManager(getContext(), 2, GridLayoutManager.HORIZONTAL, false);
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {

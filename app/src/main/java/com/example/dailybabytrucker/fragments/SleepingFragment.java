@@ -36,7 +36,7 @@ import static android.content.Context.MODE_PRIVATE;
  */
 public class SleepingFragment extends Fragment {
 
-    TextView tvSleepingSchadule;
+    TextView tvDescriptionSchedule;
     EditText etTakeNotes;
     ImageButton btnAddNote;
 
@@ -54,11 +54,11 @@ public class SleepingFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sleeping, container, false);
 
-        tvSleepingSchadule = view.findViewById(R.id.tv_sleepingSchedule);
+        tvDescriptionSchedule = view.findViewById(R.id.tv_descriptionSchedule);
 
 
 
-        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("myprefs", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("myPrefs", MODE_PRIVATE);
         final SharedPreferences.Editor editor = sharedPreferences.edit();
 
         final EditText etTakeNotes = view.findViewById(R.id.etNote);
@@ -99,12 +99,6 @@ public class SleepingFragment extends Fragment {
                 editor.apply();
                 etTakeNotes.setText("");
 
-
-//                FragmentManager fragmentManager = getFragmentManager();
-//                NotesFragment notesFragment = new NotesFragment();
-//                if (fragmentManager != null) {
-//                    fragmentManager.beginTransaction().replace(R.id.main_container, notesFragment).commit();
-//                }
             }
         });
 

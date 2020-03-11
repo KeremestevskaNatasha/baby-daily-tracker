@@ -33,6 +33,7 @@ public class FeedingFragment extends Fragment {
     CardView months10;
     CardView months11;
     CardView months12;
+    CardView notes;
 
     public FeedingFragment() {
         // Required empty public constructor
@@ -41,14 +42,16 @@ public class FeedingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_feeding, container, false);
-        months6= view.findViewById(R.id.months6);
-        months7= view.findViewById(R.id.months7);
-        months8= view.findViewById(R.id.months8);
-        months9= view.findViewById(R.id.months9);
-        months10= view.findViewById(R.id.months10);
-        months11= view.findViewById(R.id.months11);
-        months12= view.findViewById(R.id.months12);
+        months6 = view.findViewById(R.id.months6);
+        months7 = view.findViewById(R.id.months7);
+        months8 = view.findViewById(R.id.months8);
+        months9 = view.findViewById(R.id.months9);
+        months10 = view.findViewById(R.id.months10);
+        months11 = view.findViewById(R.id.months11);
+        months12 = view.findViewById(R.id.months12);
+        notes = view.findViewById(R.id.notes);
 
         months6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +61,9 @@ public class FeedingFragment extends Fragment {
                 ExpandableMain6Fragment expandableMain6Fragment = new ExpandableMain6Fragment();
 
                 if (fragmentManager != null) {
-                    fragmentManager.beginTransaction().replace(R.id.main_container, expandableMain6Fragment).commit();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, expandableMain6Fragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -72,8 +77,10 @@ public class FeedingFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 ExpandableMain7Fragment expandableMain7Fragment = new ExpandableMain7Fragment();
 
-                if(fragmentManager != null){
-                    fragmentManager.beginTransaction().replace(R.id.main_container,expandableMain7Fragment).commit();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, expandableMain7Fragment)
+                            .addToBackStack(null).commit();
                 }
             }
         });
@@ -84,8 +91,10 @@ public class FeedingFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 ExpandableMain8Fragment expandableMain8Fragment = new ExpandableMain8Fragment();
 
-                if(fragmentManager != null){
-                    fragmentManager.beginTransaction().replace(R.id.main_container,expandableMain8Fragment).commit();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, expandableMain8Fragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -97,8 +106,10 @@ public class FeedingFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 ExpandableMain9Fragment expandableMain9Fragment = new ExpandableMain9Fragment();
 
-                if(fragmentManager != null){
-                    fragmentManager.beginTransaction().replace(R.id.main_container,expandableMain9Fragment).commit();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, expandableMain9Fragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -110,8 +121,10 @@ public class FeedingFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 ExpandableMain10Fragment expandableMain10Fragment = new ExpandableMain10Fragment();
 
-                if(fragmentManager != null){
-                    fragmentManager.beginTransaction().replace(R.id.main_container,expandableMain10Fragment).commit();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, expandableMain10Fragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -123,8 +136,10 @@ public class FeedingFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 ExpandableMain11Fragment expandableMain11Fragment = new ExpandableMain11Fragment();
 
-                if(fragmentManager != null){
-                    fragmentManager.beginTransaction().replace(R.id.main_container,expandableMain11Fragment).commit();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, expandableMain11Fragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -136,13 +151,31 @@ public class FeedingFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 ExpandableMain12Fragment expandableMain12Fragment = new ExpandableMain12Fragment();
 
-                if(fragmentManager != null){
-                    fragmentManager.beginTransaction().replace(R.id.main_container,expandableMain12Fragment).commit();
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, expandableMain12Fragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
         });
 
+
+        notes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getFragmentManager();
+                NotesFragment notesFragment = new NotesFragment();
+
+                if (fragmentManager != null) {
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, notesFragment)
+                            .addToBackStack(null).commit();
+                }
+            }
+        });
+
         return view;
     }
+
 }

@@ -75,7 +75,7 @@
 	<string name="recipeId">Recipes Id</string>
 	<string name="bdp_home_label">Home</string>
 	<string name="sleeping_schedule_notes">Sleeping schedule notes</string>
-	<string name="about_sleeping_schadule">Keep in mind that newborn schedules are generally much more variable than older children’s schedules.
+	<string name="about_sleeping_schedule">Keep in mind that newborn schedules are generally much more variable than older children’s schedules.
 		A baby doesn’t really get on a clock-based schedule until 6 months old, on average,
 		though some are naturally more predictable than others.Some older babies and toddlers can struggle with schedules that are too rigid to the clock,
 		so you will want to use what you know best about your own baby or toddler to adjust your schedule to fit his or her personality and temperament.
@@ -123,6 +123,7 @@
 	<string name="note">Note</string>
 	<string name="enter_your_note_here">Add note</string>
 	<string name="bdp_button_login">Login</string>
+	<string name="feeding_schedule_notes">Feeding Schedule Notes</string>
 
 
 </resources>

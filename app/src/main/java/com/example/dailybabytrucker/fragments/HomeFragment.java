@@ -1,17 +1,17 @@
 package com.example.dailybabytrucker.fragments;
 
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
-
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,11 +19,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
-
 import com.example.dailybabytrucker.R;
 import com.example.dailybabytrucker.UI.activities.MyAccountActivity;
 import com.example.dailybabytrucker.UI.activities.NavigationIconClickListener;
 import com.example.dailybabytrucker.UI.activities.SettingsActivity;
+
 
 
 /**
@@ -35,6 +35,7 @@ public class HomeFragment extends Fragment {
     private Button buttonMyAccount, buttonSettings;
     private Toolbar toolbar;
     private NavigationIconClickListener navigationIconClickListener;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,8 +53,11 @@ public class HomeFragment extends Fragment {
                 .replace(R.id.main_container, new RecipesFragment())
                 .commit();
 
+
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            view.findViewById(R.id.main_container).setBackgroundResource(R.drawable.product_grid_background_shape);
+            view.findViewById(R.id.main_container)
+                    .setBackgroundResource(R.drawable.product_grid_background_shape);
         }
         buttonHome = view.findViewById(R.id.homeButton);
         buttonHome.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +66,9 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 RecipesFragment recipesFragment = new RecipesFragment();
                 if (fragmentManager != null) {
-                    fragmentManager.beginTransaction().replace(R.id.main_container, recipesFragment).commit();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, recipesFragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -75,7 +81,9 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 FeedingFragment feedingFragment = new FeedingFragment();
                 if (fragmentManager != null) {
-                    fragmentManager.beginTransaction().replace(R.id.main_container, feedingFragment).commit();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, feedingFragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -89,7 +97,9 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 SleepingFragment sleepingFragment = new SleepingFragment();
                 if (fragmentManager != null) {
-                    fragmentManager.beginTransaction().replace(R.id.main_container, sleepingFragment).commit();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, sleepingFragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -104,7 +114,9 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 GrowthFragment growthFragment = new GrowthFragment();
                 if (fragmentManager != null) {
-                    fragmentManager.beginTransaction().replace(R.id.main_container, growthFragment).commit();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, growthFragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -117,7 +129,9 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 LeisureFragment leisureFragment = new LeisureFragment();
                 if (fragmentManager != null) {
-                    fragmentManager.beginTransaction().replace(R.id.main_container, leisureFragment).commit();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.main_container, leisureFragment)
+                            .addToBackStack(null).commit();
                 }
 
             }
@@ -149,6 +163,7 @@ public class HomeFragment extends Fragment {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         if (activity != null) {
             activity.setSupportActionBar(toolbar);
+
         }
 
         navigationIconClickListener = new NavigationIconClickListener(
@@ -165,4 +180,16 @@ public class HomeFragment extends Fragment {
         menuInflater.inflate(R.menu.dbt_toolbar_menu, menu);
         super.onCreateOptionsMenu(menu, menuInflater);
     }
+
+
+//    protected void setTitle(@StringRes int stringId) {
+//        setTitle(getString(stringId));
+//    }
+//
+//    protected void setTitle(String title) {
+//        FragmentActivity activity = getActivity();
+//        if (activity != null) {
+//            activity.setTitle(title);
+//        }
+//    }
 }

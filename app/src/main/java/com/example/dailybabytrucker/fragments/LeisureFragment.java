@@ -23,7 +23,7 @@ public class LeisureFragment extends Fragment {
     private RecyclerView recyclerViewVideos;
     int[] imgVideos;
     String[] videoTitle;
-    String[] placeGuiedVideos;
+    String[] placeGuideVideos;
     private Button btnWatchVideo;
 
 
@@ -53,7 +53,7 @@ public class LeisureFragment extends Fragment {
                 "Learn shapes with Morphle",
                 "Morphle in space"};
 
-        placeGuiedVideos = new String[]{
+        placeGuideVideos = new String[]{
                 "https://www.youtube.com/watch?v=v3VLDuRpq6k",
                 "https://www.youtube.com/watch?v=Y0ENlAyZ4Oo",
                 "https://www.youtube.com/watch?v=TImGKb4aqag",
@@ -65,7 +65,7 @@ public class LeisureFragment extends Fragment {
         recyclerViewVideos.setLayoutManager(linearLayoutManager);
         VideosRecyclerViewAdapter adapter =
                 new VideosRecyclerViewAdapter(getContext(),
-                        imgVideos, videoTitle, placeGuiedVideos, btnWatchVideo);
+                        imgVideos, videoTitle, placeGuideVideos, btnWatchVideo);
         recyclerViewVideos.setAdapter(adapter);
 
         return rootView;

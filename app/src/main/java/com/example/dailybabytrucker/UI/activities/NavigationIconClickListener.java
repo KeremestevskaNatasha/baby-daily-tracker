@@ -58,10 +58,10 @@ public class NavigationIconClickListener implements View.OnClickListener {
 
         updateIcon(view);
 
-        final int translateY = height -
-                context.getResources().getDimensionPixelSize(R.dimen.bdt_product_grid_reveal_height);
+        final int translateY = height - context.getResources().getDimensionPixelSize(R.dimen.bdt_product_grid_reveal_height);
 
-        ObjectAnimator animator = ObjectAnimator.ofFloat(sheet, "translationY", backdropShown ? translateY : 0);
+        ObjectAnimator animator = ObjectAnimator
+                .ofFloat(sheet, "translationY", backdropShown ? translateY : 0);
         animator.setDuration(500);
         if (interpolator != null) {
             animator.setInterpolator(interpolator);

@@ -3,18 +3,17 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:orientation="vertical"
-	android:padding="8dp"
+	android:padding="4dp"
 	android:background="@color/colorPrimary"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:weightSum="12"
 	tools:context=".fragments.GrowthFragment">
 	
 	
 	<androidx.cardview.widget.CardView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:padding="4dp"
+		app:cardUseCompatPadding="true"
 		app:cardBackgroundColor="@android:color/transparent"
 		app:cardElevation="0dp"
 		app:cardPreventCornerOverlap="true"
@@ -27,6 +26,7 @@
 			
 			<ImageView
 				android:id="@+id/ivGrowth"
+				android:scaleType="centerCrop"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content" />
 			
@@ -38,8 +38,8 @@
 				
 				<TextView
 					android:id="@+id/tvTitleGrowth"
-					android:textSize="20sp"
 					android:textAlignment="center"
+					android:textSize="20sp"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
 				
@@ -47,6 +47,16 @@
 					android:id="@+id/tvGrowth"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content" />
+				
+				<Button
+					android:id="@+id/btnVisit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textStyle="bold"
+					android:textAlignment="center"
+					android:textIsSelectable="true"
+					android:background="@android:color/transparent"
+					android:text="Visit for more"/>
 			</LinearLayout>
 			
 		</LinearLayout>
