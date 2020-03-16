@@ -25,6 +25,9 @@ public class NavigationIconClickListener implements View.OnClickListener {
     private Drawable openIcon;
     private Drawable closeIcon;
 
+    private View navigationView;
+
+
     public NavigationIconClickListener(Context context, View sheet) {
         this(context, sheet, null);
     }
@@ -49,6 +52,13 @@ public class NavigationIconClickListener implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+
+        if(view != null){
+            this.navigationView = view;
+        }
+        if (this.navigationView == null){
+            return;
+        }
         backdropShown = !backdropShown;
 
         // Cancel the existing animations
@@ -56,7 +66,7 @@ public class NavigationIconClickListener implements View.OnClickListener {
         animatorSet.end();
         animatorSet.cancel();
 
-        updateIcon(view);
+        updateIcon(this.navigationView);
 
         final int translateY = height - context.getResources().getDimensionPixelSize(R.dimen.bdt_product_grid_reveal_height);
 
@@ -73,6 +83,7 @@ public class NavigationIconClickListener implements View.OnClickListener {
     private void updateIcon(View view) {
         if (openIcon != null && closeIcon != null) {
             if (!(view instanceof ImageView)) {
+
                 throw new IllegalArgumentException("updateIcon() must be called on an ImageView");
             }
             if (backdropShown) {
@@ -82,5 +93,7 @@ public class NavigationIconClickListener implements View.OnClickListener {
             }
         }
     }
+
+
 }
 

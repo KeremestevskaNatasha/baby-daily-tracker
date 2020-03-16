@@ -8,6 +8,6 @@ import retrofit2.http.GET;
 
 public interface RandomRecipesApi {
 
-    @GET("recipes/random?apiKey=" + BuildConfig.API_KEY)
+    @GET("recipes/random/?apiKey=" + BuildConfig.API_KEY)
      Call<GetRecipesResponse> getRandomRecipes();
 }

@@ -63,6 +63,7 @@ public class HomeFragment extends Fragment {
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                navigationIconClickListener.onClick(null);
                 FragmentManager fragmentManager = getFragmentManager();
                 RecipesFragment recipesFragment = new RecipesFragment();
                 if (fragmentManager != null) {
@@ -70,7 +71,6 @@ public class HomeFragment extends Fragment {
                             .replace(R.id.main_container, recipesFragment)
                             .addToBackStack(null).commit();
                 }
-
             }
         });
 
@@ -78,6 +78,7 @@ public class HomeFragment extends Fragment {
         buttonFeeding.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                navigationIconClickListener.onClick(null);
                 FragmentManager fragmentManager = getFragmentManager();
                 FeedingFragment feedingFragment = new FeedingFragment();
                 if (fragmentManager != null) {
@@ -93,7 +94,7 @@ public class HomeFragment extends Fragment {
         buttonSleeping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                navigationIconClickListener.onClick(null);
                 FragmentManager fragmentManager = getFragmentManager();
                 SleepingFragment sleepingFragment = new SleepingFragment();
                 if (fragmentManager != null) {
@@ -110,7 +111,7 @@ public class HomeFragment extends Fragment {
         buttonGrowth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                navigationIconClickListener.onClick(null);
                 FragmentManager fragmentManager = getFragmentManager();
                 GrowthFragment growthFragment = new GrowthFragment();
                 if (fragmentManager != null) {
@@ -126,6 +127,7 @@ public class HomeFragment extends Fragment {
         buttonLeisure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                navigationIconClickListener.onClick(null);
                 FragmentManager fragmentManager = getFragmentManager();
                 LeisureFragment leisureFragment = new LeisureFragment();
                 if (fragmentManager != null) {

@@ -65,9 +65,6 @@ public class RecipesFragment extends Fragment {
         recyclerView.setLayoutManager(gridLayoutManager);
 
 
-        //RW, want TO BE
-        // staggered asymmetric grid layout cards, BUT m doing something wrong, just set as linear
-
 //        LinearLayoutManager linearLayoutManager = new LinearLayoutManager
 //                (getContext(), RecyclerView.HORIZONTAL, false);
 //        recyclerView.setLayoutManager(linearLayoutManager);
@@ -84,11 +81,6 @@ public class RecipesFragment extends Fragment {
 
                 List<RandomRecipes> recipes = response.body().getRecipes();
 
-//                StaggeredRecipesCardRecyclerViewAdapter adapter =
-//                        new StaggeredRecipesCardRecyclerViewAdapter(getContext(), recipes);
-//                recyclerView.setAdapter(adapter);   // the 2 lines set in the onResponse od Retrofit
-
-
                 StaggeredRecipesCardRecyclerViewAdapter adapter =
                         new StaggeredRecipesCardRecyclerViewAdapter(getContext(), recipes);
                  recyclerView.setAdapter(adapter);
@@ -97,10 +89,9 @@ public class RecipesFragment extends Fragment {
                 recyclerView.addItemDecoration(new ProductGridItemDecoration(largePadding, smallPadding));
 
 
-
-//                int largePadding = getResources().getDimensionPixelSize(R.dimen.shr_product_grid_spacing);
-//                int smallPadding = getResources().getDimensionPixelSize(R.dimen.shr_product_grid_spacing_small);
-//                recyclerView.addItemDecoration(new ProductGridItemDecoration(largePadding, smallPadding));
+                largePadding = getResources().getDimensionPixelSize(R.dimen.shr_product_grid_spacing);
+                smallPadding = getResources().getDimensionPixelSize(R.dimen.shr_product_grid_spacing_small);
+                recyclerView.addItemDecoration(new ProductGridItemDecoration(largePadding, smallPadding));
 
             }
 

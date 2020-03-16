@@ -77,50 +77,65 @@
 	<string name="recipeId">Идентификација на рецептот</string>
 	<string name="bdp_home_label">Home</string>
 	<string name="sleeping_schedule_notes">Забелешки за распорен во спиење</string>
-	<string name="about_sleeping_schedule">Keep in mind that newborn schedules are generally much more variable than older children’s schedules. A baby doesn’t really get on a clock-based schedule until 6 months old, on average, though some are naturally more predictable than others.</string>
-	<string name="your_baby_s_growth_first_12_months">Your baby’s growth – first 12 months</string>
-	<string name="your_baby_s_growth">Your baby’s growth</string>
+	<string name="about_sleeping_schedule">Имајте на ум дека распоредот за новороденчиња генерално е многу повеќе променлив
+		од распоредот на постарите деца.Бебе навистина не заминува на часовник распоред, до 6 месеци
+        , во просек, иако некои се природно попредвидливи од другите.</string>
+	<string name="your_baby_s_growth_first_12_months"> Раст на вашето бебе - првите 12 месеци</string>
+	<string name="your_baby_s_growth">Растот на вашето бебе</string>
 	
 	
-	<string name="growth_1st_mont">Infant development begins at at birth and they grow fast and learn a lot.
-		At 1 month, cuddling, sleeping and feeding are all that really matters to your baby.
-		The time you spend with them will help their brain to grow and develop as they start to experience the world.</string>
-	<string name="growth_2nd_mont">Your 2-month-old is growing fast and becoming more alert.
-		They will be making more sounds and getting more skilled at moving their body.
-		They will still be crying a lot - but you’ve probably already seen that magic first smile (usually at 6 weeks) which somehow makes all the hard work worthwhile.</string>
-	<string name="growth_3th_mont">By 3 months, your baby will have formed a strong attachment to you.
-		They will respond to you with lots of smiles, and might even talk back to you in their own way.
-		The worst of the crying should be nearly over, and you can really enjoy your baby as they grow into their own little person.</string>
-	<string name="growth_4th_mont">From 4 months, your baby will quickly be learning to coordinate their body.
-		They will have more control over what they do, their vision, touch and hearing will be much more developed, and they will start to move around much more.
-		They can communicate much better too, and the number of hours for which they cry should have settled by now.</string>
-	<string name="growth_5th_mont">Your baby will be growing and developing rapidly now.
-		They are learning more about the world and how they fit into it. Many of the new things your baby is learning at 5 months are preparing them for eating solid food.
-		It is usually recommended you introduce solids at 6 months, but some babies are ready as early as 4 months.
-		So, if you think it’s time, it’s fine to start experimenting with solids now.</string>
-	<string name="growth_6th_mont">Six months is an exciting time and your baby will now be developing very fast.
-		The left side of their brain will have has started communicating with the right side, meaning they can coordinate their body better.
-		You will be understanding your baby much better now as they let you know whether they’re happy or sad and start to respond to words</string>
-	<string name="growth_7th_mont">Your baby is now growing up fast.
-		They may well be sitting on their own, eating solid foods - although breastmilk or formula will still be their main source of nutrition - and understanding more about what you want from them.
-		It’s an exciting time to watch them grow</string>
-	<string name="growth_8th_mont">Your 8-month-old is probably getting into everything and moving around a lot as they explore the world.
-		This means more work for you, but it’s wonderful to watch their fascination grow.</string>
-	<string name="growth_9th_mont">At around 9 months, babies’ brains have a growth spurt.
-		They will really be developing a personality now, and you’ll be getting a glimpse of the child they’re going to grow into.</string>
-	<string name="growth_10th_mont">Your 10-month-old will now be very active.
-		You’ll probably be chasing around after them as they crawl and pull themselves up onto furniture, and you’ll be learning more about your baby’s developing personality.</string>
-	<string name="growth_11th_mont">At 11 months old, your baby will be almost a toddler, and they will be maturing fast.
-		You’ll probably be surprised how quickly they can move around your home and how independent they are becoming.</string>
-	<string name="growth_12th_mont">At 12 months, your baby is officially a toddler.
-		If they haven’t already, it won’t be long now before they take their first steps, develop a sense of humour, and tell you they love you.</string>
-	<string name="logOutButton">logout</string>
-	<string name="bdp_button_save">Save</string>
-	<string name="delete">Delete</string>
-	<string name="time">Time</string>
-	<string name="note">Note</string>
-	<string name="enter_your_note_here">Add note</string>
-	<string name="bdp_button_login">Login</string>
-	<string name="feeding_schedule_notes">Feeding Schadule Notes</string>
+	<string name="growth_1st_mont">Развој на новороденчиња започнува уште од раѓање и тие растат брзо и учат многу.
+              На 1 месец, гушкањето, спиењето и хранењето се сè што се важни за вашето бебе.
+            Времето што ќе го поминете со нив ќе им помогне на нивниот мозок да расте и да се развива како што почнуваат да го доживуваат светот.</string>
+	<string name="growth_2nd_mont">Вашата 2-месечна возраст рапидно расте и станува се повнимателна.
+                Тие прават повеќе звуци и ќе бидат поквалификувани во движењето на телото.
+                    Тие сè уште ќе плачат многу - но веројатно веќе сте ја виделе таа магија
+                прва насмевка (обично на 6 недели) што некако ја прави целата напорна работа вредна.</string>
+	<string name="growth_3th_mont">До 3 месеци, вашето бебе ќе формира силна приврзаност кон вас.
+               Тие ќе ви одговорат со многу насмевки, па дури и ќе можат да разговараат со вас на свој начин.
+              Најлошото од плачењето треба да заврши скоро, и навистина може да уживате
+           вашето бебе додека растат во своја мала личност.</string>
+	<string name="growth_4th_mont">Од 4 месеци, вашето бебе брзо ќе научи да го координира своето тело.
+                            Тие ќе имаат поголема контрола врз она што го прават, нивниот вид,
+                       допирот и слухот ќе бидат многу поразвиени и тие ќе започнат да се движат многу повеќе.
+                 Тие можат да комуницираат многу подобро, и бројот на часови за кои тие плачат требаше да се реши до сега.</string>
+	<string name="growth_5th_mont">Вашето бебе сега ќе расте и рапидно расте.
+            Тие учат повеќе за светот и за тоа како се вклопуваат во него.
+        Многу од новите работи што ги учи вашето бебе на 5 месеци ги подготвуваат за јадење цврста храна.
+        Обично се препорачува да воведете цврсти материи на 6 месеци, но некои бебиња се подготвени уште 4 месеци.
+        Значи, ако мислите дека е време, добро е да започнете да експериментирате со цврсти материи сега.</string>
+	<string name="growth_6th_mont">
+        Шест месеци е возбудливо време и вашето бебе сега ќе се развива многу брзо.
+           Левата страна на мозокот ќе започна да комуницира со десната страна,
+        значи дека можат подобро да го координираат своето тело.
+        Willе го разберете вашето бебе многу подобро сега, бидејќи тие ќе ви кажат дали се среќни
+        или тажна и почнете да одговарате на зборови.</string>
+	<string name="growth_7th_mont">Вашето бебе сега растат брзо.
+               Тие можеби седат сами, јадат цврста храна -
+              иако доењето или формулата сепак ќе бидат нивниот главен извор на исхрана
+            - и разбирање повеќе за тоа што сакате од нив.
+            Возбудливо време е да ги гледате како растат</string>
+	<string name="growth_8th_mont">Вашиот 8-месечен човек веројатно влегува во сè и се движи наоколу
+            многу додека го истражуваат светот.
+            Ова значи повеќе работа за вас, но прекрасно е да внимавате како расте нивната фасцинација.</string>
+	<string name="growth_9th_mont">На околу 9 месеци, мозоците на бебињата имаат раст на растот.
+       Тие навистина ќе развиваат личност сега и ќе погледнете
+       на детето во кое ќе прераснат.</string>
+	<string name="growth_10th_mont">Вашето 10-месечно бебе сега ќе биде многу активно.
+           Веројатно ќе бркате по нив, додека тие се лазат и ќе се повлечат на мебел,
+           и ќе научите повеќе за личноста во развој на вашето бебе.</string>
+	<string name="growth_11th_mont"> На 11 месеци, вашето бебе ќе биде скоро дете и тие ќе созреат брзо.
+             Веројатно ќе бидете изненадени колку брзо можат да се движат низ вашиот дом и колку стануваат независни.</string>
+	<string name="growth_12th_mont">На 12 месеци, вашето бебе е официјално дете.
+          Ако веќе не сте, нема да биде долго пред да ги преземат првите чекори,
+         развијте чувство за хумор и ви кажам дека ве сакаат.</string>
+	<string name="logOutButton"> Од Логирај Се</string>
+	<string name="bdp_button_save">Зачувај</string>
+	<string name="delete">Избриши</string>
+	<string name="time">Време</string>
+	<string name="note">Забелешка</string>
+	<string name="enter_your_note_here">Додај Забелешка</string>
+	<string name="bdp_button_login">Логирај Се</string>
+	<string name="feeding_schedule_notes">Забелешки за распоред на хранење</string>
 
 </resources>
