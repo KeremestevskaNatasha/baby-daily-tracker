@@ -1,0 +1,47 @@
+package com.example.dailybabytrucker.fragments.ExpandableFragments;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Product implements Parcelable {
+
+    public final String name;
+
+    public Product(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public static Creator<Product> getCREATOR() {
+        return CREATOR;
+    }
+
+    protected Product(Parcel in) {
+        name = in.readString();
+    }
+
+    public static final Creator<Product> CREATOR = new Creator<Product>() {
+        @Override
+        public Product createFromParcel(Parcel in) {
+            return new Product(in);
+        }
+
+        @Override
+        public Product[] newArray(int size) {
+            return new Product[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+    }
+}

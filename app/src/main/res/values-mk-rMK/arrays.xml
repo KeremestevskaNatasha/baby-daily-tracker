@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="gender_entries">
+		<item>-</item>
+		<item>Машко</item>
+		<item>Женско</item>
+	</string-array>
+	<string-array name="gender_values">
+		<item>-</item>
+		<item>Машко</item>
+		<item>Женско</item>
+	</string-array>
+	<string-array name="relation_entries">
+		<item>Мајка</item>
+		<item>Татко</item>
+		<item>Роднина</item>
+	
+	</string-array>
+	<string-array name="relation_values">
+		
+		<item>Мајка</item>
+		<item>Татко</item>
+		<item>Роднина</item>
+	</string-array>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+	<PreferenceCategory
+		app:key="user_category"
+		app:title="USER">
+		
+		<EditTextPreference
+			app:key="key_full_name"
+			app:title="Name"
+			app:dialogTitle="Baby's Name"
+			app:dialogMessage="Enter your Baby full name"
+			app:useSimpleSummaryProvider="true" />
+		
+		<EditTextPreference
+			app:key="key_birthday"
+			app:title="Birthday"
+			app:dialogTitle="Baby's Birthday"
+			app:dialogMessage="Enter your Baby date of birth"
+			app:useSimpleSummaryProvider="true" />
+		
+		<ListPreference
+			app:key="key_gender"
+			app:entries="@array/gender_entries"
+			app:entryValues="@array/gender_values"
+			android:defaultValue="-"
+			app:title="Baby's Gender"
+			app:useSimpleSummaryProvider="true" />
+		
+		<ListPreference
+			app:key="key_family_relation"
+			app:entries="@array/relation_entries"
+			app:entryValues="@array/relation_values"
+			android:defaultValue="Mom"
+			app:title="I am"
+			app:useSimpleSummaryProvider="true" />
+		
+		
+	</PreferenceCategory >
+	
+	<PreferenceCategory app:title="Legal">
+		
+		<Preference
+			app:key="key_privacy"
+			app:title="Privacy Policy"
+			app:useSimpleSummaryProvider="true"/>
+		<Preference
+			app:key="key_terms"
+			app:title="Terms and Conditions"
+			app:useSimpleSummaryProvider="true"/>
+	
+	</PreferenceCategory>
+	
+	
+	<PreferenceCategory app:title="Feedback">
+		
+		<Preference
+			app:key="key_intent"
+			app:title="Share this App with"
+			app:useSimpleSummaryProvider="true"/>
+	
+	</PreferenceCategory>
+	
+	
+	<Preference
+		android:title="Logout"
+		android:key="key_logOut"
+		/>
+
+</PreferenceScreen>
