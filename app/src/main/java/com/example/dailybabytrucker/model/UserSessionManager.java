@@ -28,9 +28,9 @@ public class UserSessionManager {
     }
 
 
-    /**
-     * Clear session details
-     * */
+
+     //Clear session details
+
     public void logoutUser(){
 
         // Clearing all user data from Shared Preferences

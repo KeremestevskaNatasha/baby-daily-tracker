@@ -6,18 +6,24 @@
 	<string name="start">GOT IT</string>
 	
 	<string name="slide_1_title">Wellcome</string>
-	<string name="slide_1_desc">Your baby’s day at your fingertips!</string>
+	<string name="slide_1_desc">In Your Daily Baby Tracker
+		you will find useful and practical tips for raising child.
+		Your baby’s day at your fingertips!</string>
 	
-	<string name="slide_2_title">Personalize the daily schedule</string>
-	<string name="slide_2_desc">The baby tracking app for moms which will help you personalize relevant information according to your baby’s daily schedule.</string>
+	<string name="slide_2_title">Personalize the schedule</string>
+	<string name="slide_2_desc">The baby tracking app for moms which will help you
+		personalize relevant information according to your baby’s daily schedule.</string>
 	
 	<string name="slide_3_title">Feeding, Breastfeeding!</string>
-	<string name="slide_3_desc">The app is an excellent way to keep a log of your baby’s breastfeeding, feeding schedule</string>
+	<string name="slide_3_desc">The app is an excellent way to keep a log of your baby’s
+		breastfeeding, feeding schedule</string>
 	
 	<string name="slide_4_title">Activities</string>
-	<string name="slide_4_desc">The app will help you to track most of your newborn’s daily things, such as the number of soiled diapers, feeding times, sleep hours, nap times and more.</string>
+	<string name="slide_4_desc">The app will help you to track most of your newborn’s
+		daily things, feeding times, sleep hours, nap times and more.</string>
 	
-	<string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+	<string name="play_again_desc">To see the welcome slider again,
+		goto Settings -> apps -> welcome slider -> clear data</string>
 	<string name="play_again">Play Again</string>
 	
 	
