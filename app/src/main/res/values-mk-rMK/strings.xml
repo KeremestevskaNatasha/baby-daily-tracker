@@ -137,5 +137,21 @@
 	<string name="enter_your_note_here">Додај Забелешка</string>
 	<string name="bdp_button_login">Логирај Се</string>
 	<string name="feeding_schedule_notes">Забелешки за распоред на хранење</string>
-
+	
+	
+	<!-- Register -->
+	<string name="dbt_hint_name">Име</string>
+	<string name="dbt_hint_confirm_password">Потврдија Лозинката</string>
+	<string name="bdp_button_register">Регистрирај се </string>
+	<string name="error_message_name">Целосно Име </string>
+	<string name="error_message_email">Внеси валиден емаил</string>
+	
+	<string name="error_message_age">Внеси Години</string>
+	<string name="error_message_password">Внеси Лозинка</string>
+	<string name="success_message">Успешно Регистрирање</string>
+	<string name="text_not_member">No account yet? Create one</string>
+	<string name="text_already_member">Already a member? Login</string>
+	<string name="error_email_exists">Емаил веќе постое</string>
+	<string name="error_password_match">Лозинката не се софпаѓа</string>
+	<string name="error_valid_email_password">Погрешен емаил или лозинка</string>
 </resources>

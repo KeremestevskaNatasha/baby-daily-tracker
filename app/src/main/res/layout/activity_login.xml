@@ -18,7 +18,7 @@
 		
 		<ImageView
 			android:layout_width="64dp"
-			android:layout_height="64dp"
+			android:layout_height="74dp"
 			android:layout_gravity="center_horizontal"
 			android:layout_marginTop="48dp"
 			android:layout_marginBottom="16dp"
@@ -29,9 +29,9 @@
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_horizontal"
 			android:layout_marginBottom="132dp"
-			android:textSize="30dp"
 			android:text="@string/dbt_app_name"
-			android:textAppearance="@color/colorPrimaryDark" />
+			android:textAppearance="@color/colorPrimaryDark"
+			android:textSize="30sp" />
 		
 		
 		<com.google.android.material.textfield.TextInputLayout
@@ -41,6 +41,7 @@
 			android:hint="@string/dbt_hint_username">
 			
 			<com.google.android.material.textfield.TextInputEditText
+				android:id="@+id/email_edit_text"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:inputType="text"
@@ -98,12 +99,18 @@
 				android:layout_toLeftOf="@id/login_button"
 				android:textColor="@color/colorPrimary"
 				android:text="@string/bdp_button_cancel"/>
-		
-		
-		
-		
+			
 		</RelativeLayout>
-	
-	
+		
+		<TextView
+			android:id="@+id/tv_signUp"
+			android:gravity="center"
+			android:layout_marginTop="10dp"
+			android:textSize="16dp"
+			android:textColor="@color/colorPrimary"
+			android:text="No account yet? Create One"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" />
+		
 	</LinearLayout>
 </ScrollView>

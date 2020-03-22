@@ -30,10 +30,27 @@
 	<!-- TODO: Remove or change this placeholder text -->
 	<string name="dbt_app_name">Daily Baby Tracker</string>
 	
-	<!--  Login  -->
-	<string name="dbt_hint_username">Baby Name </string>
-	<string name="dbt_hint_password">Date of Birth</string>
+	<!--  Login / Register  -->
+	<string name="dbt_hint_username">Email </string>
+	<string name="dbt_hint_password">Password</string>
 	<string name="change_language">Change Language</string>
+	
+	<string name="dbt_hint_name">Name</string>
+	<string name="dbt_hint_confirm_password">Confirm Password</string>
+	<string name="bdp_button_register">Register</string>
+	
+	<string name="error_message_name">Enter Full Name</string>
+	<string name="error_message_email">Enter Valid Email</string>
+	
+	<string name="error_message_age">Enter Age</string>
+	<string name="error_message_password">Enter Password</string>
+	<string name="success_message">Registration Successful</string>
+	<string name="text_not_member">No account yet? Create one</string>
+	<string name="text_already_member">Already a member? Login</string>
+	<string name="error_email_exists">Email Already Exists</string>
+	<string name="error_password_match">Password Does Not Matches</string>
+	<string name="error_valid_email_password">Wrong Email or Password</string>
+	
 	
 	<string name="bdp_button_next">Next</string>
 	<string name="bdp_button_cancel">Cancel</string>
@@ -130,6 +147,7 @@
 	<string name="enter_your_note_here">Add note</string>
 	<string name="bdp_button_login">Login</string>
 	<string name="feeding_schedule_notes">Feeding Schedule Notes</string>
+	
 
 
 </resources>

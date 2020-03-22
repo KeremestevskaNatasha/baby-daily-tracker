@@ -10,7 +10,8 @@
 		android:label="DailyBabyTrаcker"
 		android:supportsRtl="true"
 		android:theme="@style/Theme.Shrine">
-		<activity android:name=".UI.activities.MyAccountActivity"></activity>
+		<activity android:name=".UI.activities.RegisterActivity"></activity>
+		<activity android:name=".UI.activities.MyAccountActivity" />
 		<activity
 			android:name=".UI.activities.SettingsActivity"
 			android:label="@string/title_activity_settings" />
